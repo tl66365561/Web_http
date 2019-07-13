@@ -79,3 +79,20 @@ urn: 统一资源命名/名称	    与资源的位置无关  命名资源但不�
 
 //echo $？
 
+
+
+
+//handlerrequest-Process:
+reciveoneline;
+requesrlineparse;
+islegalmethod;
+urlparse;
+islegalpath;
+recivehead;
+requestheadparse;
+isneedrecivecontent;
+sendprocess
+
+
+
+
