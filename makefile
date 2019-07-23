@@ -1,26 +1,27 @@
-bin=HttpdServer
+bin=httpserver 
+src=httpserver.cc
 cc=g++
-LDFLAGS=-lpthread
+LDflags=-lpthread
 
-#.PHONY:all
-#	all:$(bin) cgi
+.PHONY:all
+	
+all:$(bin)  Cal
 
-$(bin):HttpdServer.cc
-	$(cc) -o  $@ $^ $(LDFLAGS) -std=c++11
-
-#.PHONY:cgi
-#	cgi:
-#	g++ -o Cal Cal.cc
+$(bin):$(src)
+	$(cc) -o $@ $^ $(LDflags) -std=c++11
 
 .PHONY:clean
-	clean:
-	rm -rf $(bin) Cal output
+clean:
+	rm -rf $(bin) Cal output 
 
-#.PHONY:output
-#	output:
-#	mkdir output
-#	cp $(bin) output
-#	cp -rf wwwroot output
-#	cp Cal output/wwwroot
-#	cp start.sh output
-	
+.PHONY:Cal
+Cal:Cal.cc
+	g++ -o Cal Cal.cc
+	mv Cal wwwroot
+
+.PHONY:output
+output:
+	mkdir output
+	cp $(bin) output
+	cp -rf wwwroot output 
+	cp start.sh output

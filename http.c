@@ -66,8 +66,9 @@ while(1)
 		ssize_t rec = recv(newfd, buff, 1023, 0);
 		if (ret > 0)
 		printf("req:[%s]\n", buff);
-	    char *rsp = "<h1>hello world</h1>";
-		memset(buff, 0x00, 1024);
+	    
+    char *rsp = "<h1>hello world</h1>";
+    memset(buff, 0x00, 1024);
 	    sprintf(buff, "%s\r\n%s%d\r\n%s\r\n%s\r\n\r\n%s", 
         "HTTP/1.1 302 Found", 
 		"Content-Length: ", strlen(rsp),

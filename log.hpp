@@ -46,7 +46,7 @@ void Log(int level_, std::string message_, std::string file_, int line_)
 
 // LOG(INFO, "bind success");
 //
-// #endif
+ #endif
 
 
 
