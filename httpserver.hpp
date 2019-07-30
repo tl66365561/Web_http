@@ -9,6 +9,8 @@ class HttpdServer{
 private:
     int listen_sock;
     int port;
+    
+public:    
     ThreadPool *tp;
 public:
     HttpdServer(int port_):port(port_),listen_sock(-1),tp(NULL)
